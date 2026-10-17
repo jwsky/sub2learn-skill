@@ -1,0 +1,25 @@
+1
+00:00:01,000 --> 00:00:03,200
+Good morning! Did you sleep well?
+
+2
+00:00:03,800 --> 00:00:06,400
+Not really. The neighbors rehearsed
+their band until midnight.
+
+3
+00:00:07,000 --> 00:00:09,000
+Let's get a coffee before the meeting.
+
+4
+00:00:09,600 --> 00:00:12,400
+The quarterly forecast looks
+surprisingly optimistic.
+
+5
+00:00:12,900 --> 00:00:14,800
+I'll believe it when I see the numbers.
+
+6
+00:00:15,300 --> 00:00:17,500
+Fair enough. See you at the elevator.

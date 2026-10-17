@@ -1,0 +1,26 @@
+{
+  "name": "sub2learn-skill",
+  "version": "1.0.0",
+  "description": "Agent skill: extract, merge and translate subtitles with sub2learn.com through a headless browser.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "homepage": "https://sub2learn.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwsky/sub2learn-skill.git"
+  },
+  "bin": {
+    "s2l": "scripts/s2l.mjs"
+  },
+  "scripts": {
+    "doctor": "node scripts/s2l.mjs doctor",
+    "selftest": "node scripts/s2l.mjs selftest"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "playwright": "1.63.0"
+  }
+}

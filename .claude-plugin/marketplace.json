@@ -1,0 +1,29 @@
+{
+  "name": "sub2learn-skill",
+  "owner": {
+    "name": "Sub2Learn",
+    "email": "websitejava@outlook.com",
+    "url": "https://sub2learn.com"
+  },
+  "metadata": {
+    "description": "The Sub2Learn subtitle skill for Claude Code.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "sub2learn",
+      "source": "./",
+      "description": "Extract, merge and translate movie subtitles with sub2learn.com through a headless browser (MKV/WebM extraction, PGS OCR, bilingual SRT, level-graded translation).",
+      "version": "1.0.0",
+      "author": {
+        "name": "Sub2Learn",
+        "email": "websitejava@outlook.com"
+      },
+      "homepage": "https://sub2learn.com",
+      "repository": "https://github.com/jwsky/sub2learn-skill",
+      "license": "MIT",
+      "keywords": ["subtitles", "srt", "mkv", "bilingual", "translation", "ocr"],
+      "category": "productivity"
+    }
+  ]
+}
