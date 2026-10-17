@@ -42,6 +42,13 @@ Or with the installer (also runs the setup below):
 curl -fsSL https://raw.githubusercontent.com/jwsky/sub2learn-skill/main/install.sh | bash -s -- --claude
 ```
 
+Prefer to read the script first? Clone, then run it from the checkout:
+
+```bash
+git clone https://github.com/jwsky/sub2learn-skill
+bash sub2learn-skill/install.sh --claude      # or --codex, or both
+```
+
 ### Codex
 
 Ask Codex — its built-in skill installer handles it:

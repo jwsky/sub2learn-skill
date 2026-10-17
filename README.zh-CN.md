@@ -42,6 +42,13 @@
 curl -fsSL https://raw.githubusercontent.com/jwsky/sub2learn-skill/main/install.sh | bash -s -- --claude
 ```
 
+想先看脚本内容？先 clone，再在仓库里执行：
+
+```bash
+git clone https://github.com/jwsky/sub2learn-skill
+bash sub2learn-skill/install.sh --claude      # 或 --codex，也可以两个都加
+```
+
 ### Codex
 
 直接让 Codex 用它自带的 skill 安装器：
