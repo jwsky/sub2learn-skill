@@ -203,7 +203,8 @@ function parseSubtitleFile(file) {
 const toSrt = cues => cues.map((c, i) => `${i + 1}\n${fmtTime(c.s)} --> ${fmtTime(c.e)}\n${c.t}\n`).join('\n');
 
 // Same alignment as the site's merge card: the top track's timeline is authoritative; each top
-// cue collects every bottom cue that overlaps it (deduplicated). Output is byte-identical.
+// cue collects every bottom cue that overlaps it (deduplicated). Output matches the site byte for
+// byte, except that the site keeps any CRLF a Matroska text cue carries inside multi-line cues.
 function mergeCues(top, bottom) {
   const out = []; let lo = 0;
   for (const a of top) {

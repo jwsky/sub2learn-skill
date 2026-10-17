@@ -69,7 +69,7 @@ Skill 第一次使用时会先自检（`doctor`），缺浏览器或 npm 包就�
 |---|---|
 | Node.js | 20 或更高（Playwright 1.63 的要求） |
 | 浏览器 | Playwright 自带的 Chromium（默认；支持 x86_64 和 ARM64），**或** Google Chrome / Edge / 系统 Chromium |
-| 系统 | Linux，包括服务器（已测：Ubuntu 24.04 ARM64；CI 里测 Ubuntu x86_64）。无头运行，不需要显示器；root 运行没问题。macOS 理论上同样可用，但未测试。 |
+| 系统 | Linux，包括服务器（已测：Ubuntu 24.04 ARM64；CI 里测 Ubuntu 24.04 x86_64）。无头运行，不需要显示器；root 运行没问题。macOS 理论上同样可用，但未测试。 |
 | 内存 | 提取/合并/翻译约 400 MB，带 OCR 约 550 MB 起（用自带样例实测）；建议预留 1 GB，OCR 预留 2 GB |
 | 磁盘 | Playwright 的 Chromium 约 650 MB（`--shell-only` 约 270 MB） |
 | 网络 | 能访问 `https://sub2learn.com` |
@@ -149,7 +149,7 @@ node scripts/s2l.mjs selftest --with-ocr --with-translate
 python3 tools/make-samples.py      # 重新生成样例视频（需要 Pillow + ffmpeg）
 ```
 
-CI 在 `ubuntu-latest` 上分别用 Playwright Chromium 和 runner 自带的 Google Chrome 跑自测。
+CI 在 Ubuntu 24.04（x86_64）上分别用 Playwright Chromium 和 runner 自带的 Google Chrome 跑自测。
 
 ## 联系
 

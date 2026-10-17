@@ -69,7 +69,7 @@ The skill checks itself on first use (`doctor`) and runs `scripts/setup.sh` when
 |---|---|
 | Node.js | 20 or newer (Playwright 1.63 requires it) |
 | Browser | Playwright's Chromium (default; x86_64 and ARM64) **or** Google Chrome / Edge / distro Chromium |
-| OS | Linux, servers included (tested: Ubuntu 24.04 ARM64, Ubuntu x86_64 in CI). Headless — no display needed; running as root is fine. macOS should work the same way but is not tested. |
+| OS | Linux, servers included (tested: Ubuntu 24.04 on ARM64, and Ubuntu 24.04 x86_64 in CI). Headless — no display needed; running as root is fine. macOS should work the same way but is not tested. |
 | Memory | ~400 MB for extract/merge/translate, ~550 MB+ with OCR (measured on the bundled samples); plan 1 GB, 2 GB for OCR |
 | Disk | ~650 MB for Playwright's Chromium (~270 MB with `--shell-only`) |
 | Network | access to `https://sub2learn.com` |
@@ -149,7 +149,7 @@ node scripts/s2l.mjs selftest --with-ocr --with-translate
 python3 tools/make-samples.py      # rebuild the sample videos (needs Pillow + ffmpeg)
 ```
 
-CI runs the self-test on `ubuntu-latest` with Playwright's Chromium and with the runner's Google Chrome.
+CI runs the self-test on Ubuntu 24.04 (x86_64) with Playwright's Chromium and with the runner's Google Chrome.
 
 ## Contact
 

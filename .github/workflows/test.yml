@@ -12,14 +12,14 @@ permissions:
 jobs:
   chromium:
     name: Playwright Chromium (setup.sh, OCR, translate)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     defaults:
       run:
         working-directory: skills/sub2learn
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
       - name: Setup (npm ci + Chromium with system libraries)
@@ -29,14 +29,14 @@ jobs:
 
   google-chrome:
     name: System Google Chrome
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     defaults:
       run:
         working-directory: skills/sub2learn
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
       - name: Setup (npm ci only, browser comes from the runner)
