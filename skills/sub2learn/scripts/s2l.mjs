@@ -15,7 +15,7 @@ import path from 'node:path';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 
-const VERSION = '1.0.0';
+const VERSION = '1.0.1';
 const SKILL_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const ASSETS = path.join(SKILL_DIR, 'assets');
 const DEFAULT_SITE = 'https://sub2learn.com/';
@@ -50,7 +50,7 @@ const SELECTORS = {
   ocrLang: 'select.ocrlang',
   ocrButton: 'button.ocrbtn',
   ocrStatus: '.ocrstat',
-  ocrDone: '.trtools button[data-srt]', // appears when OCR finishes (the status line is then replaced)
+  ocrDone: '.trtools button[data-srt]', // appears when OCR finishes
   ocrWarn: '.ocrstat .s2lmkv-warn',
   merge: '#s2lmkv-results .s2lmkv-merge',
   mergeTop: 'select.mg-top',
@@ -211,7 +211,7 @@ function mergeCues(top, bottom) {
     if (!a) continue;
     while (lo < bottom.length && bottom[lo].e <= a.s) lo++;
     const parts = [];
-    for (let j = lo; j < bottom.length && bottom[j].s < a.e; j++) { const b = bottom[j]; if (b.t && !parts.includes(b.t)) parts.push(b.t); }
+    for (let j = lo; j < bottom.length && bottom[j].s < a.e; j++) { const b = bottom[j]; if (b.e > a.s && b.t && !parts.includes(b.t)) parts.push(b.t); }
     out.push({ s: a.s, e: a.e, top: a.t || '', bottom: parts.join('\n') });
   }
   return out;

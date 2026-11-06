@@ -10,6 +10,20 @@ permissions:
   contents: read
 
 jobs:
+  security:
+    name: Local regressions and secret scanning
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: 22
+      - run: node tools/test-local.mjs
+      - run: bash tools/scan-secrets.sh
+
   chromium:
     name: Playwright Chromium (setup.sh, OCR, translate)
     runs-on: ubuntu-24.04
@@ -18,8 +32,8 @@ jobs:
       run:
         working-directory: skills/sub2learn
     steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
           node-version: 22
       - name: Setup (npm ci + Chromium with system libraries)
@@ -35,8 +49,8 @@ jobs:
       run:
         working-directory: skills/sub2learn
     steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
           node-version: 22
       - name: Setup (npm ci only, browser comes from the runner)

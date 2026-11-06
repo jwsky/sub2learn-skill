@@ -1,6 +1,6 @@
 {
   "name": "sub2learn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extract, merge and translate movie subtitles with sub2learn.com through a headless browser: MKV/WebM track extraction, Blu-ray PGS OCR, bilingual SRT merging and English-level-graded translation. Works on a Linux VPS.",
   "author": {
     "name": "Sub2Learn",

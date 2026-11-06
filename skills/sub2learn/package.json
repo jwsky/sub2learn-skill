@@ -1,6 +1,6 @@
 {
   "name": "sub2learn-skill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Agent skill: extract, merge and translate subtitles with sub2learn.com through a headless browser.",
   "type": "module",
   "private": true,

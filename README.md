@@ -5,6 +5,9 @@
 
 **English** · [中文](README.zh-CN.md)
 
+Security checks and private reporting: [SECURITY.md](SECURITY.md). CI scans the complete Git
+history and current files for secrets. Local regressions: `node tools/test-local.mjs`.
+
 An agent skill for **Claude Code, Codex and other AI agents**: they open [sub2learn.com](https://sub2learn.com) in a headless browser and use it to **extract**, **merge** and **translate** subtitles for you — including Blu-ray image subtitles (OCR) and translations that only cover the lines above your English level. It runs fine on a **Linux VPS** with no display. The video itself never leaves your machine.
 
 ## What you can ask for

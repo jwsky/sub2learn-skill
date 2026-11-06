@@ -2,3 +2,9 @@ node_modules/
 *.log
 .DS_Store
 /test-output/
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+*token*.json

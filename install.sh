@@ -67,6 +67,18 @@ for base in "${DESTS[@]}"; do
     echo "install.sh: $target exists but is not the sub2learn skill — leaving it untouched." >&2; exit 1
   fi
   mkdir -p "$target"
+  source_real="$(cd "$SRC" && pwd -P)"
+  target_real="$(cd "$target" && pwd -P)"
+  if [ "$source_real" = "$target_real" ]; then
+    say "Already using this checkout → $target (source files kept)"
+    if [ "$DO_SETUP" -eq 1 ]; then
+      bash "$target/scripts/setup.sh" "${SETUP_ARGS[@]+"${SETUP_ARGS[@]}"}"
+    fi
+    continue
+  fi
+  case "$target_real/" in
+    "$source_real/"*) echo "install.sh: destination is inside the skill source — leaving it untouched." >&2; exit 1 ;;
+  esac
   # replace our own files, keep node_modules so an update does not re-download anything
   for item in "$target"/* "$target"/.[!.]*; do
     [ -e "$item" ] || continue

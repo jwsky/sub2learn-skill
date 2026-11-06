@@ -5,6 +5,9 @@
 
 [English](README.md) · **中文**
 
+安全检查与私下反馈见 [SECURITY.md](SECURITY.md)。CI 会扫描全部 Git 历史和当前文件中的密钥；
+本地回归检查可运行 `node tools/test-local.mjs`。
+
 这是一个给 **Claude Code、Codex 等 AI 智能体**用的 Skill：AI 会用无头浏览器打开 [sub2learn.com](https://sub2learn.com)，替你完成字幕的**提取**、**合并**和**翻译**——包括蓝光图形字幕的 OCR，以及「只翻你英语水平以上的句子」的学习型翻译。没有显示器的 **Linux VPS** 也能跑，视频本身不会离开你的机器。
 
 ## 能让 AI 做什么
